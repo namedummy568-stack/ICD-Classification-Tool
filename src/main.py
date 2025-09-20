@@ -1,4 +1,6 @@
 
+import pickle
+
 def classify_icd(code):
     """
     Placeholder for ICD classification logic.
@@ -9,6 +11,12 @@ def classify_icd(code):
         return "Neoplasms"
     else:
         return "Other diseases"
+
+def insecure_deserialize(data):
+    """
+    Simulates an insecure deserialization vulnerability.
+    """
+    return pickle.loads(data)
 
 if __name__ == "__main__":
     print(classify_icd("A00"))
